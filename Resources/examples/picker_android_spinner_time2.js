@@ -25,7 +25,10 @@ var label = Ti.UI.createLabel({
 	width:'auto',
 	height:'auto',
 	textAlign:'center',
-	color:'white'
+	color:'white',
+	font: {
+		fontSize:24	
+	}
 });
 win.add(label);
 
@@ -38,5 +41,8 @@ win.add(Ti.UI.createLabel({
 	text: 'This example shows setting "minuteInterval: 15".',
 	backgroundColor: 'blue',
 	color: 'yellow',
-	bottom: 5
+	bottom: 5,
+	font: {
+		fontSize:24	
+	}
 }));

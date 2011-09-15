@@ -19,11 +19,11 @@ function makeVerbRows() {
 }
 
 function makeNameColumn() {
-	return Ti.UI.createPickerColumn({rows: makeNameRows()});
+	return Ti.UI.createPickerColumn({rows: makeNameRows(), font: {fontSize:24}});
 }
 
 function makeVerbColumn() {
-	return Ti.UI.createPickerColumn({rows: makeVerbRows()});
+	return Ti.UI.createPickerColumn({rows: makeVerbRows(), font: {fontSize:24}});
 }
 
 win.add(Ti.UI.createLabel({
@@ -36,12 +36,15 @@ win.add(Ti.UI.createLabel({
 }));
 var l = Ti.UI.createLabel({
 	text: 'Defaults:',
-	left: 5, top: 40, height: 35
+	left: 5, top: 45, height: 35,
+	font: {
+		fontSize: 24	
+	}
 });
 win.add(l);
 
 var picker = Ti.UI.createPicker({
-	top: 80, 
+	top: 100, 
 	columns: [makeNameColumn(), makeVerbColumn(), makeNameColumn()],
 	useSpinner: true
 });
@@ -49,8 +52,8 @@ win.add(picker);
 
 var btnChangeVisible = Ti.UI.createButton({
 	title: '(chg visibleItems to 3)',
-	font: {fontSize: 12},
-	top: 40, left: 80, right: 5, height: 35, toggle: 3
+	font: {fontSize: 18},
+	top: 40, left: 120, right: 5, height: 50, toggle: 3
 });
 btnChangeVisible.addEventListener('click', function() {
 	var newval = btnChangeVisible.toggle;
@@ -67,8 +70,10 @@ win.add(btnChangeVisible);
 
 win.add(Ti.UI.createLabel({
 	text: 'visibleItems: 3, explicit col. widths, selectionIndicator: false',
-	left: 5, top: 200, height: 35,
-	font: {fontSize: 12}
+	left: 5, top: 300, height: 35,
+	font: {
+		fontSize:24	
+	}
 }));
 
 var nameColumn1 = makeNameColumn();
@@ -78,7 +83,7 @@ nameColumn2.width = 100;
 var verbColumn = makeVerbColumn();
 verbColumn.width = 75;
 win.add(Ti.UI.createPicker({
-	top: 240,
+	top: 335,
 	useSpinner: true,
 	columns: [nameColumn1, verbColumn, nameColumn2],
 	visibleItems: 3,
@@ -86,22 +91,25 @@ win.add(Ti.UI.createPicker({
 }));
 
 win.add(Ti.UI.createLabel({
-	left: 5, top: 300, height: 35,
-	text: "font size/weight/family + color"
+	left: 5, top: 440, height: 35,
+	text: "font size/weight/family + color",
+	font: {
+		fontSize:24	
+	}
 }));
 
 nameColumn1 = makeNameColumn();
-nameColumn1.font = {fontSize: 10, fontFamily: 'serif'};
+nameColumn1.font = {fontSize: 18, fontFamily: 'serif'};
 nameColumn1.color = "red";
 nameColumn2 = makeNameColumn();
-nameColumn2.font = {fontSize: 10, fontFamily: 'sans-serif', fontWeight: 'bold'};
+nameColumn2.font = {fontSize: 18, fontFamily: 'sans-serif', fontWeight: 'bold'};
 nameColumn2.color = "purple";
 verbColumn = makeVerbColumn();
-verbColumn.font = {fontSize: 10, fontFamily: 'serif', fontWeight: 'bold'};
+verbColumn.font = {fontSize: 18, fontFamily: 'serif', fontWeight: 'bold'};
 verbColumn.color = "blue";
 
 win.add(Ti.UI.createPicker({
-	top: 340, useSpinner: true,
+	top: 480, useSpinner: true,
 	columns: [nameColumn1, verbColumn, nameColumn2]
 }));
 
