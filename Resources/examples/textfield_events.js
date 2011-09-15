@@ -25,7 +25,7 @@ var l = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	color:'#777',
-	font:{fontSize:13},
+	font:{fontSize:18},
 	text:'do something like click a button...'
 });
 scrolly.add(l);
@@ -112,9 +112,12 @@ showHide.addEventListener('click', function()
 
 var instructions = Ti.UI.createLabel({
 	text:'Rotate device while keyboard is up',
-	bottom:10,
+	top:270,
 	height:30,
-	color:'#777'
+	color:'#777',
+	font: {
+		fontSize:18	
+	}
 });
 scrolly.add(instructions);
 
