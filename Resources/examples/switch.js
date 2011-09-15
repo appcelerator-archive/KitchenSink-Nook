@@ -5,10 +5,10 @@ var win = Titanium.UI.currentWindow;
 //
 var basicSwitchLabel = Titanium.UI.createLabel({
 	text:'Basic Switch value = false' ,
-	color:'#999',
+	color:'#777',
 	font:{
 		fontFamily:'Helvetica Neue',
-		fontSize:15
+		fontSize:18
 	},
 	textAlign:'center',
 	top:10,
@@ -17,9 +17,10 @@ var basicSwitchLabel = Titanium.UI.createLabel({
 
 var basicSwitch = Titanium.UI.createSwitch({
 	value:false,
-	top:30
+	top:50,
+	height: 60,
+	width: 120
 });
-
 basicSwitch.addEventListener('change',function(e)
 {
 	basicSwitchLabel.text = 'Basic Switch value = ' + e.value + ' act val ' + basicSwitch.value;
@@ -30,9 +31,9 @@ basicSwitch.addEventListener('change',function(e)
 //
 var changeButton = Titanium.UI.createButton({
 	title:'Change Switch',
-	height:40,
+	height:50,
 	width:200,
-	top:90
+	top:120
 });
 changeButton.addEventListener('click', function()
 {
@@ -51,9 +52,9 @@ changeButton.addEventListener('click', function()
 //
 var hideShowButton = Titanium.UI.createButton({
 	title:'Hide/Show Switch',
-	height:40,
+	height:50,
 	width:200,
-	top:140
+	top:180
 });
 var hidden=false;
 hideShowButton.addEventListener('click', function()
@@ -75,33 +76,33 @@ win.add(basicSwitch);
 win.add(changeButton);
 win.add(hideShowButton);
 
-if (Titanium.Platform.osname == 'android')
-{
-	//
-	// CHECKBOX
-	//
-	var checkBox = Titanium.UI.createSwitch({
-			style:Titanium.UI.Android.SWITCH_STYLE_CHECKBOX,
-			title:"CheckBox: " + false,
-			color: '#fff',
-			value:false,
-			top:190
-	});
-	checkBox.addEventListener('change', function(e) {
-		checkBox.title = "CheckBox: " + e.value;
-	});
-	
-	//
-	// TOGGLEBUTTON W/ TITLE
-	//
-	var titleSwitch = Titanium.UI.createSwitch({
-			style:Titanium.UI.Android.SWITCH_STYLE_TOGGLEBUTTON,
-			titleOff:"LO",
-			titleOn:"HI",
-			value:false,
-			top:240
-	});
+//
+// CHECKBOX
+//
+var checkBox = Titanium.UI.createSwitch({
+		style:Titanium.UI.Android.SWITCH_STYLE_CHECKBOX,
+		title:"CheckBox: " + false,
+		color: '#fff',
+		value:false,
+		top:240
+});
+checkBox.addEventListener('change', function(e) {
+	checkBox.title = "CheckBox: " + e.value;
+});
 
-	win.add(checkBox);
-	win.add(titleSwitch);
-}
+//
+// TOGGLEBUTTON W/ TITLE
+//
+var titleSwitch = Titanium.UI.createSwitch({
+		style:Titanium.UI.Android.SWITCH_STYLE_TOGGLEBUTTON,
+		titleOff:"LO",
+		titleOn:"HI",
+		value:false,
+		top:290,
+		height: 60,
+		width: 120
+});
+
+win.add(checkBox);
+win.add(titleSwitch);
+
