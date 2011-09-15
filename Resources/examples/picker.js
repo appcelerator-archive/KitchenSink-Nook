@@ -1,3 +1,5 @@
+Ti.include('../common.js');
+
 var data = [
 	{title:'Basic Picker', test:'../examples/picker_basic.js'},
 	{title:'Picker Single column 1', test:'../examples/picker_singlecolumn1.js'},
@@ -10,7 +12,7 @@ var data = [
 	{title:'Android "useSpinner" - time', test:'../examples/picker_android_spinner_time.js'},
 	{title:'Android "useSpinner" - time 2', test:'../examples/picker_android_spinner_time2.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

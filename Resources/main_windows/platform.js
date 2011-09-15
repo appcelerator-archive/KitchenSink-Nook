@@ -1,27 +1,29 @@
+Ti.include('../common.js');
+
 // create table view data object
 var data = [
-	{title:'XHR', hasChild:true, test:'../examples/xhr.js'},
-	{title:'Network', hasChild:true, test:'../examples/network.js'},
-	{title:'Common JS', hasChild:true, test:'../examples/commonjs.js'},
-	{title:'Logging', hasChild:true, test:'../examples/logging.js'},
-	{title:'Application Data', hasChild:true, test:'../examples/app_data.js'},
-	{title:'Application Events', hasChild:true, test:'../examples/app_events.js'},
-	{title:'Properties API', hasChild:true, test:'../examples/properties.js'},
-	{title:'Database', hasChild:true, test:'../examples/database.js'},
-	{title:'Platform Data', hasChild:true, test:'../examples/platform.js'},
-	{title:'Filesystem', hasChild:true, test:'../examples/filesystem.js'},
-	{title:'JS Includes', hasChild:true, test:'../examples/js_include.js'},
-	{title:'Set Timeout (timer)', hasChild:true, test:'../examples/set_timeout.js'},
-	{title:'Set Interval (timer)', hasChild:true, test:'../examples/set_interval.js'},
-	{title:'XML RSS', hasChild:true, test:'../examples/xml_rss.js'},
-	{title:'Utils', hasChild:true, test:'../examples/utils.js'},
-	{title:'JSON', hasChild:true, test:'../examples/json.js'},
-	{title:'JS search', hasChild:true, test:'../examples/search_case_insensitive.js'},
-	{title:'Clipboard', hasChild:true, test:'../examples/clipboard.js'},
-	{title:'Sockets', hasChild:true, test:'../examples/sockets.js'},
-	{title: 'Android services', hasChild:true, test:'../examples/android_services.js'}
+	{title:'XHR', test:'../examples/xhr.js'},
+	{title:'Network', test:'../examples/network.js'},
+	{title:'Common JS', test:'../examples/commonjs.js'},
+	{title:'Logging', test:'../examples/logging.js'},
+	{title:'Application Data', test:'../examples/app_data.js'},
+	{title:'Application Events', test:'../examples/app_events.js'},
+	{title:'Properties API', test:'../examples/properties.js'},
+	{title:'Database', test:'../examples/database.js'},
+	{title:'Platform Data', test:'../examples/platform.js'},
+	{title:'Filesystem', test:'../examples/filesystem.js'},
+	{title:'JS Includes', test:'../examples/js_include.js'},
+	{title:'Set Timeout (timer)', test:'../examples/set_timeout.js'},
+	{title:'Set Interval (timer)', test:'../examples/set_interval.js'},
+	{title:'XML RSS', test:'../examples/xml_rss.js'},
+	{title:'Utils', test:'../examples/utils.js'},
+	{title:'JSON', test:'../examples/json.js'},
+	{title:'JS search', test:'../examples/search_case_insensitive.js'},
+	{title:'Clipboard', test:'../examples/clipboard.js'},
+	{title:'Sockets', test:'../examples/sockets.js'},
+	{title: 'Android services', test:'../examples/android_services.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

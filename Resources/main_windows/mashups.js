@@ -1,3 +1,5 @@
+Ti.include('../common.js');
+
 // create table view data object
 var data = [
 	{title:'Twitter', test:'../examples/twitter.js', title_image:'../images/twitter_logo_header.png'},
@@ -6,7 +8,7 @@ var data = [
 	{title:'YQL', test:'../examples/yql.js'},
 	{title:'SOAP', test:'../examples/soap.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
  
 // create table view
 var tableview = Titanium.UI.createTableView({

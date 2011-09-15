@@ -1,3 +1,5 @@
+Ti.include('../common.js');
+
 // create table view data object
 var data = [
 	{title:'Tab Groups', Codestrongtest:'../examples/tab_groups.js'},
@@ -14,7 +16,7 @@ var data = [
 	{title: 'Window Soft Input (Android)', Codestrongtest:'../examples/android_window_soft_input_mode.js'},
 	{title: 'Menu (Android)', Codestrongtest:'../examples/android_menus.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

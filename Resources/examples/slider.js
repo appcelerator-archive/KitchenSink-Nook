@@ -1,10 +1,12 @@
+Ti.include('../common.js');
+
 // create slider view data object
 var data = [
 	{title:'Basic', test:'../examples/slider_basic.js'},
 	{title:'Change Min/Max', test:'../examples/slider_min_max.js'},
 	{title:'Min/Max Range', test:'../examples/slider_range.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

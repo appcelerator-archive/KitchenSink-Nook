@@ -1,3 +1,5 @@
+Ti.include('../common.js');
+
 // create table view data object
 var data = [
 	{title:'Events', test:'../examples/textfield_events.js'},
@@ -5,7 +7,7 @@ var data = [
 	{title:'Border Style', test:'../examples/textfield_borders.js'},
 	{title:'The Rest', test:'../examples/textfield_therest.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

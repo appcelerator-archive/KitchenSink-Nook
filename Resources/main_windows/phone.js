@@ -1,14 +1,16 @@
+Ti.include('../common.js');
+
 // create table view data object
 var data = [
-	{title:'Play Movie', hasChild:true, test:'../examples/movie.js'},
-	{title:'Vibrate', hasChild:true, test:'../examples/vibrate.js'},
-	{title:'Sound', hasChild:true, test:'../examples/sound.js'},
-	{title:'Photo Gallery', hasChild:true, test:'../examples/photo_gallery.js'},
-	{title:'Orientation', hasChild:true, test:'../examples/orientation.js'},
-	{title:'Contacts', hasChild:true, test:'../examples/contacts.js'},
-	{title:'Notfications', hasChild:true, test:'../examples/notification.js'}
+	{title:'Play Movie', test:'../examples/movie.js'},
+	{title:'Vibrate', test:'../examples/vibrate.js'},
+	{title:'Sound', test:'../examples/sound.js'},
+	{title:'Photo Gallery', test:'../examples/photo_gallery.js'},
+	{title:'Orientation', test:'../examples/orientation.js'},
+	{title:'Contacts', test:'../examples/contacts.js'},
+	{title:'Notfications', test:'../examples/notification.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

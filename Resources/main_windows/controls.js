@@ -1,3 +1,5 @@
+Ti.include('../common.js');
+
 // create table view data object
 var data = [
 	{title:'Slider', test:'../examples/slider.js'},
@@ -11,7 +13,7 @@ var data = [
 	{title:'Text Area', test:'../examples/textarea_basic.js'},
 	{title:'Picker', test:'../examples/picker.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

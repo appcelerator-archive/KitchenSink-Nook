@@ -1,9 +1,11 @@
+Ti.include('../common.js');
+
 // create label view data object
 var data = [
 	{title:'Basic', test:'../examples/label_basic.js'},
 	{title:'Auto Link', test:'../examples/label_linkify.js'}
 ];
-Ti.UI.currentWindow.formatTableView(data);
+NookKS.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({
