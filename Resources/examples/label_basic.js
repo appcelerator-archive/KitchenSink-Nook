@@ -9,7 +9,7 @@ win.add(l1);
 
 var l2 = Titanium.UI.createLabel({
 	text:'Appcelerator',
-	height:50,
+	height:60,
 	width:'auto',
 	shadowColor:'#aaa',
 	shadowOffset:{x:5,y:5},
@@ -25,7 +25,7 @@ var b1 = Titanium.UI.createButton({
 	title:'Hide/Show',
 	height:40,
 	width:200,
-	top:230
+	top:240
 });
 var visible=true;
 b1.addEventListener('click', function()
@@ -49,7 +49,7 @@ var b2 = Titanium.UI.createButton({
 	title:'Change Label 2',
 	height:40,
 	width:200,
-	top:280
+	top:290
 });
 var changed=false;
 b2.addEventListener('click', function()
@@ -77,7 +77,7 @@ var b3 = Titanium.UI.createButton({
 	title:'Label 1 background',
 	height:40,
 	width:200,
-	top:330
+	top:340
 });
 var bg = false;
 b3.addEventListener('click', function()
