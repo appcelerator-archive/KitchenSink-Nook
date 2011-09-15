@@ -1,5 +1,7 @@
 tmp
+build.log
 build/*
+!build/android
 .fastdev.lock
 .project
 .settings
