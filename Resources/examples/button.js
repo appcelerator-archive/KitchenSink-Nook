@@ -7,22 +7,12 @@ var b1 = Titanium.UI.createButton({
 	top:10
 });
 
-
-var b2 = Titanium.UI.createButton({
-	title:'I am a Button',
-	image:'../images/chat.png',
-	width:200,
-	height:40,
-	top:60
-});
-
-
 var b3 = Titanium.UI.createButton({
 	color:'#fff',
 	backgroundImage:'../images/BUTT_grn_off.png',
 	backgroundSelectedImage:'../images/BUTT_grn_on.png',
 	backgroundDisabledImage: '../images/BUTT_drk_off.png',
-	top:110,
+	top:90,
 	width:301,
 	height:57,
 	font:{fontSize:20,fontWeight:'bold',fontFamily:'Helvetica Neue'},
@@ -77,7 +67,7 @@ b3.addEventListener('click', function()
 
 var b4 = Titanium.UI.createButton({
 	title:'Hide/Show Button Above',
-	width:200,
+	width:250,
 	height:40,
 	top:175
 });
@@ -97,114 +87,63 @@ b4.addEventListener('click', function()
 	}
 });
 
-var b5 = Titanium.UI.createButton({
-	width:200,
-	height:40,
-	top:225
-});
-var b5Label = Ti.UI.createLabel({
-	text:'Label',
-	width:50,
-	height:20,
-	color:'#336699'
-});
-b5.add(b5Label);
-
-var b5ImageView = Ti.UI.createImageView({
-	image:'../images/camera.png',
-	left:10,
-	height:33,
-	width:33
-});
-b5.add(b5ImageView);
-b5.addEventListener('touchstart', function()
-{
-	b5Label.color = 'red';
-});
-b5.addEventListener('touchend', function()
-{
-	b5Label.color = '#336699';
-});
 win.add(b1);
 win.add(b3);
 win.add(b4);
 
-// add iphone specific tests
-if (Titanium.Platform.name == 'iPhone OS')
-{
-	win.add(b2);
-	win.add(b5);
+// add a series of alignment buttons
+var buttonRows = [
+	[
+		{ title: 'H-Left', textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT },
+		{ title: 'H-Center', textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER },
+		{ title: 'H-Right', textAlign: Titanium.UI.TEXT_ALIGNMENT_RIGHT }
+	],
+	[
+		{ title: 'V-Top', verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP },
+		{ title: 'V-Center', verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER },
+		{ title: 'V-Bottom', verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM }
+	]
+];
+
+for (var i = 0; i < buttonRows.length; i++) {
+	var row = buttonRows[i];
+	for (var j = 0; j < row.length; j++) {
+		var button = Titanium.UI.createButton({
+			title: row[j].title,
+			width: 100,
+			height: 40,
+			top: 300 + (50 * i),
+			left: 100 * (j+1),
+			textAlignProperty: row[j].textAlign,
+			verticalAlignProperty: row[j].verticalAlign
+		});
+		button.addEventListener('click', function(e) {
+			if (e.source.textAlignProperty) {
+				b1.textAlign = e.source.textAlignProperty;
+			} else if (e.source.verticalAlignProperty) {
+				b1.verticalAlign = e.source.verticalAlignProperty;
+			}
+		});	
+		win.add(button);
+	}
 }
 
-var bhleft = Titanium.UI.createButton({
-	title : 'H-Left',
-	width : 50,
-	height: 40,
-	top : 300,
-	left : 60
-});
-bhleft.addEventListener('click', function() {
-	b1.textAlign = Titanium.UI.TEXT_ALIGNMENT_LEFT;
-});
-
-var bhcenter = Titanium.UI.createButton({
-	title : 'H-Center',
-	width : 50,
-	height: 40,
-	top : 300,
-	left : 120
-});
-bhcenter.addEventListener('click', function() {
-	b1.textAlign = Titanium.UI.TEXT_ALIGNMENT_CENTER;
-});
-
-var bhright = Titanium.UI.createButton({
-	title : 'H-Right',
-	width : 50,
-	height: 40,
-	top : 300,
-	left : 180
-});
-bhright.addEventListener('click', function() {
-	b1.textAlign = Titanium.UI.TEXT_ALIGNMENT_RIGHT;
-});
-
-var bvtop = Titanium.UI.createButton({
-	title : 'V-Top',
-	width : 50,
-	height: 40,
-	top : 350,
-	left : 60
-});
-bvtop.addEventListener('click', function() {
-	b1.verticalAlign = Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP;
-});
-
-var bvcenter = Titanium.UI.createButton({
-	title : 'V-Center',
-	width : 50,
-	height: 40,
-	top : 350,
-	left : 120
-});
-bvcenter.addEventListener('click', function() {
-	b1.verticalAlign = Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER;
-});
-
-var bvbottom = Titanium.UI.createButton({
-	title : 'V-Bottom',
-	width : 50,
-	height: 40,
-	top : 350,
-	left : 180
-});
-bvbottom.addEventListener('click', function() {
-	b1.verticalAlign = Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM;
-});
-
-win.add(bhleft);
-win.add(bhcenter);
-win.add(bhright);
-win.add(bvtop);
-win.add(bvcenter);
-win.add(bvbottom);
+// for (var i = 0; i < buttons.length; i++) {
+	// var b = Titanium.UI.createButton({
+		// title: buttons[i].title,
+		// width: 100,
+		// height: 40,
+		// top: 300 + (buttons[i].row ? buttons[i].row * 50),
+		// left: 100 * (i+1),
+		// textAlign: buttons[i].textAlign || Titanium.UI.TEXT_ALIGNMENT_CENTER,
+		// verticalAlign: buttons[i].verticalAlign || Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+	// });
+	// b.addEventListener('click', function(e) {
+		// if (e.source.textAlign) {
+			// b1.textAlign = 	e.source.textAlign;
+		// } else if (e.source.verticalAlign) {
+			// b1.textAlign = 	e.source.verticalAlign;
+		// }
+	// });	
+	// win.add(b);
+// }
