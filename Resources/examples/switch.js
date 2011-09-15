@@ -70,101 +70,10 @@ hideShowButton.addEventListener('click', function()
 	}
 });
 
-//
-// SWITCH IN TOOLBAR
-//
-var toolbarButton = Titanium.UI.createButton({
-	title:'Toggle Switch in Toolbar',
-	height:40,
-	width:200,
-	top:240
-});
-var inToolbar = false;
-toolbarButton.addEventListener('click', function()
-{
-	if (!inToolbar)
-	{
-		var toolbarSwitch = Titanium.UI.createSwitch({
-			value:false
-		});
-		win.setToolbar([toolbarSwitch]);
-		inToolbar = true;
-	}
-	else
-	{
-		inToolbar = false;
-		win.setToolbar(null,{animated:true});
-	}
-});
-
-//
-// SWITCH IN NAVBAR
-//
-var navbarButton = Titanium.UI.createButton({
-	title:'Toggle Switch in Navbar',
-	height:40,
-	width:200,
-	top:190
-});
-var inNavbar = false;
-navbarButton.addEventListener('click', function()
-{
-	if (!inNavbar)
-	{
-		var navbarSwitch = Titanium.UI.createSwitch({
-			value:false
-		});
-		win.setRightNavButton(navbarSwitch);
-		inNavbar =true;
-	}
-	else
-	{
-		win.rightNavButton = null;
-		inNavbar = false;
-	}
-});
-
-//
-// SWITCH TO TITLE CONTROL
-//
-var titleButton = Titanium.UI.createButton({
-	title:'Toggle Swtich in Title',
-	height:40,
-	width:200,
-	top:290
-});
-
-
-var inTitle = false;
-titleButton.addEventListener('click', function()
-{
-	if (inTitle)
-	{
-		win.titleControl = null;
-		win.title = 'Switch';
-		inTitle=false;
-	}
-	else
-	{
-		var titleSwitch = Titanium.UI.createSwitch({
-			value:false
-		});
-		win.titleControl = titleSwitch;
-		inTitle=true;
-	}
-});
-
 win.add(basicSwitchLabel);
 win.add(basicSwitch);
 win.add(changeButton);
 win.add(hideShowButton);
-
-if (Titanium.Platform.name == 'iPhone OS')
-{
-	win.add(toolbarButton);
-	win.add(navbarButton);
-	win.add(titleButton);
-}
 
 if (Titanium.Platform.osname == 'android')
 {
@@ -174,9 +83,9 @@ if (Titanium.Platform.osname == 'android')
 	var checkBox = Titanium.UI.createSwitch({
 			style:Titanium.UI.Android.SWITCH_STYLE_CHECKBOX,
 			title:"CheckBox: " + false,
+			color: '#fff',
 			value:false,
-			top:190,
-			left:60
+			top:190
 	});
 	checkBox.addEventListener('change', function(e) {
 		checkBox.title = "CheckBox: " + e.value;
