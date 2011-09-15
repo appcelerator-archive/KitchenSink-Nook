@@ -2,10 +2,10 @@ var win = Titanium.UI.currentWindow;
 
 var l = Titanium.UI.createLabel({
 	text:'Text area tests.',
-	font:{fontSize:14},
+	font:{fontSize:24},
 	left:10,
 	top:10,
-	width:300,
+	width:580,
 	height:'auto'
 });
 win.add(l);
@@ -16,7 +16,7 @@ var ta1 = Titanium.UI.createTextArea({
 	value:'I am a textarea',
 	height:70,
 	width:300,
-	top:60,
+	top:80,
 	font:{fontSize:20,fontFamily:'Marker Felt', fontWeight:'bold'},
 	color:'#888',
 	textAlign:'left',
@@ -41,7 +41,7 @@ var b1 = Titanium.UI.createButton({
 	title:'Focus',
 	height:40,
 	width:200,
-	top:140
+	top:160
 });
 win.add(b1);
 b1.addEventListener('click', function()
@@ -56,7 +56,7 @@ var b2 = Titanium.UI.createButton({
 	title:'Blur',
 	height:40,
 	width:200,
-	top:190
+	top:210
 });
 win.add(b2);
 b2.addEventListener('click', function()
@@ -72,7 +72,7 @@ var b3 = Titanium.UI.createButton({
 	title:'Hide/Show',
 	height:40,
 	width:200,
-	top:240
+	top:260
 });
 win.add(b3);
 var visible=true;
@@ -95,7 +95,7 @@ b3.addEventListener('click', function()
 //
 var b4 = Titanium.UI.createButton({
 	title:'Toggle Properties',
-	top:290,
+	top:310,
 	height:40,
 	width:200
 });
@@ -125,7 +125,7 @@ b4.addEventListener('click', function()
 
 var b5 = Titanium.UI.createButton({
 	title:'Toggle "editable"',
-	top:340,
+	top:360,
 	height:40,
 	width:200
 });

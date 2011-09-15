@@ -22,7 +22,7 @@ var tf1 = Titanium.UI.createTextField({
 var l = Titanium.UI.createLabel({
 	top:50,
 	left:10,
-	width:300,
+	width:480,
 	height:'auto',
 	color:'#777',
 	font:{fontSize:18},

@@ -1,7 +1,11 @@
 var win = Titanium.UI.currentWindow;
 win.backgroundColor = 'black';
 
-var picker = Ti.UI.createPicker();
+var picker = Ti.UI.createPicker({
+	height:50,
+	width: 180,
+	top: 120	
+});
 
 var data = [];
 data[0]=Ti.UI.createPickerRow({title:'Bananas',custom_item:'b'});
@@ -24,15 +28,21 @@ var label = Ti.UI.createLabel({
 	width:'auto',
 	height:'auto',
 	textAlign:'center',
-	color:'white'
+	color:'white',
+	font: {
+		fontSize: 24	
+	}
 });
 win.add(label);
 
 var button = Ti.UI.createButton({
 	title:'Set to Grapes',
-	top:34,
-	width:120,
-	height:30
+	top:54,
+	width:180,
+	height:50,
+	font: {
+		fontSize:18	
+	}
 });
 win.add(button);
 

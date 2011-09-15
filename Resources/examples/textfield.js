@@ -4,7 +4,7 @@ Ti.include('../common.js');
 var data = [
 	{title:'Events', test:'../examples/textfield_events.js'},
 	{title:'Keyboard', test:'../examples/textfield_keyboards.js'},
-	{title:'Border Style', test:'../examples/textfield_borders.js'},
+	//{title:'Border Style', test:'../examples/textfield_borders.js'},
 	{title:'The Rest', test:'../examples/textfield_therest.js'}
 ];
 NookKS.formatTableView(data);
