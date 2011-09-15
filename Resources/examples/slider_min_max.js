@@ -19,7 +19,7 @@ var posLabel = Ti.UI.createLabel({
 win.add(posLabel);
 
 var slider = Ti.UI.createSlider({
-    value: 0,
+    value: 5,
     min: 0,
     max: 100,
     left:10,
@@ -33,13 +33,13 @@ slider.addEventListener('change', function(e) {
 win.add(slider);
 
 var btn1 = Ti.UI.createButton({
-	'title' : '0/0/100',
+	'title' : '0/5/100',
 	left : 10, top: 10, height:30, width:80
 });
 btn1.addEventListener('click', function() {
 	slider.min = 0;
 	slider.max = 100;
-	slider.value = 0;
+	slider.value = 5;
 });
 win.add(btn1);
 
