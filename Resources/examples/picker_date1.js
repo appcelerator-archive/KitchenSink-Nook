@@ -7,7 +7,7 @@ minDate.setMonth(0);
 minDate.setDate(1);
 
 var maxDate = new Date();
-maxDate.setFullYear(2009);
+maxDate.setFullYear(2011);
 maxDate.setMonth(11);
 maxDate.setDate(31);
 
@@ -34,7 +34,10 @@ var label = Ti.UI.createLabel({
 	width:'auto',
 	height:'auto',
 	textAlign:'center',
-	color:'white'
+	color:'white',
+	font: {
+		fontSize:24	
+	}
 });
 win.add(label);
 

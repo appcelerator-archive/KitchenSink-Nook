@@ -1,7 +1,10 @@
 /*global Ti,Titanium,alert */
 var w = Ti.UI.currentWindow;
 var status = Ti.UI.createLabel({
-	top: 5, left: 5, right: 5, height: 40, textAlign:'center'
+	top: 5, left: 5, right: 5, height: 40, textAlign:'center',
+	font: {
+		fontSize: 24	
+	}
 });
 w.add(status);
 
@@ -26,19 +29,19 @@ for (i = (names.length -1); i >=0; i--) {
 }
 
 var column1 = Ti.UI.createPickerColumn( {
-	rows: rows1, font: {fontSize: "12"}
+	rows: rows1, font: {fontSize: "24"}
 });
 var column2 = Ti.UI.createPickerColumn( {
-	rows: rows2, font: {fontSize: "12"}
+	rows: rows2, font: {fontSize: "24"}
 });
 var column3 = Ti.UI.createPickerColumn( {
-	rows: rows3, font: {fontSize: "12"}
+	rows: rows3, font: {fontSize: "24"}
 });
 
 var picker = Ti.UI.createPicker({
 	useSpinner: true, visibleItems: 7,
 	type : Ti.UI.PICKER_TYPE_PLAIN,
-	top: 150, height: 200,
+	top: 170, height: 300,
 	columns: [ column1, column2, column3 ]
 });
 
@@ -48,7 +51,7 @@ picker.addEventListener('change', function(e) {
 
 w.add(picker);
 var btnSelect = Ti.UI.createButton({
-	left: 5, height: 40, top: 50, width: 150,
+	left: 5, height: 40, top: 70, width: 150,
 	title: 'Select idxs 2/4/6'
 });
 btnSelect.addEventListener('click', function() {
@@ -59,7 +62,7 @@ btnSelect.addEventListener('click', function() {
 w.add(btnSelect);
 
 var btnAdd = Ti.UI.createButton({
-	left: 165, height: 40, top: 50, width: 150,
+	left: 165, height: 40, top: 70, width: 150,
 	title: 'Add "Manny"'
 });
 btnAdd.addEventListener('click', function() {
@@ -70,7 +73,7 @@ btnAdd.addEventListener('click', function() {
 w.add(btnAdd);
 
 var btnRemove = Ti.UI.createButton({
-	left: 5, height: 40, top: 100, width: 150,
+	left: 5, height: 40, top: 120, width: 150,
 	title: 'Remove all idx 3'
 });
 btnRemove.addEventListener('click', function() {
@@ -82,7 +85,7 @@ btnRemove.addEventListener('click', function() {
 w.add(btnRemove);
 
 var btnCheckSelection = Ti.UI.createButton({
-	left: 165, height: 40, top: 100, width: 150,
+	left: 165, height: 40, top: 120, width: 150,
 	title: 'Check sel.'
 });
 btnCheckSelection.addEventListener('click', function() {

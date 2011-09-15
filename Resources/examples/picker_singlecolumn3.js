@@ -20,7 +20,10 @@ var label = Ti.UI.createLabel({
 	width:'auto',
 	height:'auto',
 	textAlign:'center',
-	color:'white'
+	color:'white',
+	font: {
+		fontSize:24	
+	}
 });
 win.add(label);
 
