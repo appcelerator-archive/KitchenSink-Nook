@@ -104,6 +104,11 @@ var buttonRows = [
 		{ title: 'V-Bottom', verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM }
 	]
 ];
+var container = Ti.UI.createView({
+	top: 300,	
+	width: 300,
+	height: 90
+});
 
 for (var i = 0; i < buttonRows.length; i++) {
 	var row = buttonRows[i];
@@ -112,8 +117,8 @@ for (var i = 0; i < buttonRows.length; i++) {
 			title: row[j].title,
 			width: 100,
 			height: 40,
-			top: 300 + (50 * i),
-			left: 100 * (j+1),
+			top: 50 * i,
+			left: 100 * j,
 			textAlignProperty: row[j].textAlign,
 			verticalAlignProperty: row[j].verticalAlign
 		});
@@ -124,26 +129,7 @@ for (var i = 0; i < buttonRows.length; i++) {
 				b1.verticalAlign = e.source.verticalAlignProperty;
 			}
 		});	
-		win.add(button);
+		container.add(button);
 	}
 }
-
-// for (var i = 0; i < buttons.length; i++) {
-	// var b = Titanium.UI.createButton({
-		// title: buttons[i].title,
-		// width: 100,
-		// height: 40,
-		// top: 300 + (buttons[i].row ? buttons[i].row * 50),
-		// left: 100 * (i+1),
-		// textAlign: buttons[i].textAlign || Titanium.UI.TEXT_ALIGNMENT_CENTER,
-		// verticalAlign: buttons[i].verticalAlign || Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
-	// });
-	// b.addEventListener('click', function(e) {
-		// if (e.source.textAlign) {
-			// b1.textAlign = 	e.source.textAlign;
-		// } else if (e.source.verticalAlign) {
-			// b1.textAlign = 	e.source.verticalAlign;
-		// }
-	// });	
-	// win.add(b);
-// }
+win.add(container);
