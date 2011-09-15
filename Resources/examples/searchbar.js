@@ -4,7 +4,8 @@ var search = Titanium.UI.createSearchBar({
 	barColor:'#000',
 	showCancel:true,
 	height:43,
-	top:0
+	top:0,
+	softKeyboardOnFocus: Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
 });
 
 win.add(search);
@@ -112,7 +113,7 @@ search.addEventListener('cancel', function(e)
 });
 search.addEventListener('return', function(e)
 {
-	Titanium.UI.createAlertDialog({title:'Search Bar', message:'You typed ' + e.value }).show();
+	Titanium.UI.createAlertDialog({title:'Search Bar', message:'You typed ' + e.value, buttonNames:['OK'] }).show();
 	search.blur();
 });
 search.addEventListener('focus', function(e)
