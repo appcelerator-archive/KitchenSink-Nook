@@ -8,7 +8,7 @@ var data = [
 	{title:'Label', test:'../examples/label.js'},
 	{title:'Search Bar', test:'../examples/searchbar.js'},
 	{title:'Text Field', test:'../examples/textfield.js'},
-	{title:'Text Area', test:'../examples/textarea.js'},
+	{title:'Text Area', test:'../examples/textarea_basic.js'},
 	{title:'Picker', test:'../examples/picker.js'}
 ];
 Ti.UI.currentWindow.formatTableView(data);
@@ -25,7 +25,8 @@ tableview.addEventListener('click', function(e)
 	{
 		var win = Titanium.UI.createWindow({
 			url:e.rowData.test,
-			title:e.rowData.title
+			title:e.rowData.title,
+			formatTableView:Ti.UI.currentWindow.formatTableView
 		});
 		Titanium.UI.currentTab.open(win,{animated:true});
 	}

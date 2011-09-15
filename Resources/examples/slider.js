@@ -1,15 +1,10 @@
 // create slider view data object
 var data = [
-	{title:'Basic', hasChild:true, test:'../examples/slider_basic.js'},
-	{title:'Change Min/Max', hasChild:true, test:'../examples/slider_min_max.js'}
+	{title:'Basic', test:'../examples/slider_basic.js'},
+	{title:'Change Min/Max', test:'../examples/slider_min_max.js'},
+	{title:'Min/Max Range', test:'../examples/slider_range.js'}
 ];
-
-// add iphone specific tests
-if (Titanium.Platform.name == 'iPhone OS')
-{
-} else if (Titanium.Platform.name == 'android') {
-	data.push({title:'Min/Max Range', hasChild:true, test:'../examples/slider_range.js'});
-}
+Ti.UI.currentWindow.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({

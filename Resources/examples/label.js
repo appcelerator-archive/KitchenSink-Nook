@@ -1,13 +1,9 @@
 // create label view data object
 var data = [
-	{title:'Basic', hasChild:true, test:'../examples/label_basic.js'}
+	{title:'Basic', test:'../examples/label_basic.js'},
+	{title:'Auto Link', test:'../examples/label_linkify.js'}
 ];
-
-// add android specific tests
-if (Titanium.Platform.name == 'android')
-{
-	data.push({title:'Auto Link', hasChild:true, test:'../examples/label_linkify.js'});
-}
+Ti.UI.currentWindow.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({
