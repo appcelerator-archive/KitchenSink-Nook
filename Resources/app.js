@@ -3,10 +3,19 @@ Titanium.UI.setBackgroundColor('#000');
 
 // create tab group
 var tabGroup = Titanium.UI.createTabGroup();
+var formatTableView = function(data) {
+	for (var i = 0; i < data.length; i++) {
+		data[i].hasChild = true;
+		data[i].height = 70;
+		data[i].font = {fontSize:24, fontWeight:'bold'};
+		data[i].left = 20	
+	}
+};
 
 var win1 = Titanium.UI.createWindow({  
     title:'Base UI',
-    url:'main_windows/base_ui.js'
+    url:'main_windows/base_ui.js',
+    formatTableView: formatTableView
 });
 var tab1 = Titanium.UI.createTab({  
     icon:'KS_nav_views.png',
@@ -16,7 +25,8 @@ var tab1 = Titanium.UI.createTab({
 
 var win2 = Titanium.UI.createWindow({  
     title:'Controls',
-    url:'main_windows/controls.js'
+    url:'main_windows/controls.js',
+    formatTableView: formatTableView
 });
 var tab2 = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
@@ -26,7 +36,8 @@ var tab2 = Titanium.UI.createTab({
 
 var win3 = Titanium.UI.createWindow({  
     title:'Miscellaneous',
-    url:'main_windows/phone.js'
+    url:'main_windows/phone.js',
+    formatTableView: formatTableView
 });
 var tab3 = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
@@ -36,7 +47,8 @@ var tab3 = Titanium.UI.createTab({
 
 var win4 = Titanium.UI.createWindow({  
     title:'Platform',
-	url:'main_windows/platform.js'
+	url:'main_windows/platform.js',
+    formatTableView: formatTableView
 });
 var tab4 = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',
@@ -46,7 +58,8 @@ var tab4 = Titanium.UI.createTab({
 
 var win5 = Titanium.UI.createWindow({  
     title:'Mashups',
-    url:'main_windows/mashups.js'
+    url:'main_windows/mashups.js',
+    formatTableView: formatTableView
 });
 var tab5 = Titanium.UI.createTab({  
     icon:'KS_nav_ui.png',

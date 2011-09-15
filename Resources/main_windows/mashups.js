@@ -1,19 +1,13 @@
 // create table view data object
 var data = [
-	{title:'Twitter', hasChild:true, test:'../examples/twitter.js', title_image:'../images/twitter_logo_header.png'},
-	{title:'Foursquare', hasChild:true, test:'../examples/foursquare.js', title_image:'../images/light-poweredby-foursquare.png'},
-	{title:'Facebook', hasChild:true, test:'../examples/facebook.js'},
-	{title:'YQL', hasChild:true, test:'../examples/yql.js'}
+	{title:'Twitter', test:'../examples/twitter.js', title_image:'../images/twitter_logo_header.png'},
+	{title:'Foursquare', test:'../examples/foursquare.js', title_image:'../images/light-poweredby-foursquare.png'},
+	{title:'Facebook', test:'../examples/facebook.js'},
+	{title:'YQL', test:'../examples/yql.js'},
+	{title:'SOAP', test:'../examples/soap.js'}
 ];
-
-//add iphone specific tests
-if (Titanium.Platform.name == 'iPhone OS')
-{
-	data.push({title:'RSS', hasChild:true, test:'../examples/rss.js', barColor:'#b40000'});
-}
+Ti.UI.currentWindow.formatTableView(data);
  
-data.push({title:'SOAP', hasChild:true, test:'../examples/soap.js'});
-
 // create table view
 var tableview = Titanium.UI.createTableView({
 	data:data

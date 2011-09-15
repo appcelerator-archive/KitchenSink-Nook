@@ -1,24 +1,20 @@
 // create table view data object
 var data = [
-	{title:'Tab Groups', hasChild:true, test:'../examples/tab_groups.js'},
-	{title:'Window Properties', hasChild:true, test:'../examples/window_properties.js'},
-	{title:'Window Layout', hasChild:true, test:'../examples/window_layout.js'},
-	{title:'Window (Standalone)', hasChild:true, test:'../examples/window_standalone.js'},
-	{title:'Views', hasChild:true, test:'../examples/views.js'},
-	{title:'Custom Events', hasChild:true, test:'../examples/custom_events.js'},
-	{title:'Window Events', hasChild:true, test:'../examples/window_events.js'},
-	{title:'Vertical Layout', hasChild:true, test:'../examples/vertical_layout.js'},
-	{title:'Horizontal Layout', hasChild:true, test:'../examples/horizontal_layout.js'}
+	{title:'Tab Groups', Codestrongtest:'../examples/tab_groups.js'},
+	{title:'Window Properties', Codestrongtest:'../examples/window_properties.js'},
+	{title:'Window Layout', Codestrongtest:'../examples/window_layout.js'},
+	{title:'Window (Standalone)', Codestrongtest:'../examples/window_standalone.js'},
+	{title:'Views', Codestrongtest:'../examples/views.js'},
+	{title:'Custom Events', Codestrongtest:'../examples/custom_events.js'},
+	{title:'Window Events', Codestrongtest:'../examples/window_events.js'},
+	{title:'Vertical Layout', Codestrongtest:'../examples/vertical_layout.js'},
+	{title:'Horizontal Layout', Codestrongtest:'../examples/horizontal_layout.js'},
+	{title:'Preferences', Codestrongtest:'../examples/preferences.js'},
+	{title:'Hide Soft Keyboard (Android)', Codestrongtest:'../examples/android_hide_softkeyboard.js'},
+	{title: 'Window Soft Input (Android)', Codestrongtest:'../examples/android_window_soft_input_mode.js'},
+	{title: 'Menu (Android)', Codestrongtest:'../examples/android_menus.js'}
 ];
-
-// add android specific tests
-if (Titanium.Platform.osname == 'android')
-{
-	data.push({title:'Preferences', hasChild:true, test:'../examples/preferences.js'});
-    data.push({title:'Hide Soft Keyboard (Android)', hasChild:true, test:'../examples/android_hide_softkeyboard.js'});
-    data.push({title: 'Window Soft Input (Android)', hasChild:true, test:'../examples/android_window_soft_input_mode.js'});
-    data.push({title: 'Menu (Android)', hasChild:true, test:'../examples/android_menus.js'});
-}
+Ti.UI.currentWindow.formatTableView(data);
 
 // create table view
 var tableview = Titanium.UI.createTableView({
