@@ -7,7 +7,7 @@ var data = [
 	{title:'Sound', test:'../examples/sound.js'},
 	{title:'Photo Gallery', test:'../examples/photo_gallery.js'},
 	{title:'Orientation', test:'../examples/orientation.js'},
-	{title:'Contacts', test:'../examples/contacts.js'},
+	//{title:'Contacts', test:'../examples/contacts.js'},
 	{title:'Notfications', test:'../examples/notification.js'}
 ];
 NookKS.formatTableView(data);
