@@ -1,7 +1,7 @@
+.DS_Store
 tmp
 build.log
 build/*
-!build/android/.gitignore
 .fastdev.lock
 .project
 .settings
