@@ -1,3 +1,6 @@
+// TODO: Uses back button to leave popoverview causes 
+//       app to exit the phot gallery entirely
+
 var win = Titanium.UI.currentWindow;
 
 var imageView = Titanium.UI.createImageView({
