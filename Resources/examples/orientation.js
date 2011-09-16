@@ -1,4 +1,5 @@
 var win = Titanium.UI.currentWindow;
+var buttonFont = {fontSize:18};
 
 //
 // SUPPORTED ORIENTATION MODES
@@ -54,9 +55,12 @@ var l = Titanium.UI.createLabel({
 	color:'#999',
 	text:'Current Orientation: ' + getOrientation(Titanium.Gesture.orientation),
 	top:10,
-	width:300,
+	width:500,
 	height:'auto',
-	textAlign:'center'
+	textAlign:'center',
+	font: {
+		fontSize: 24	
+	}
 });
 win.add(l);
 
@@ -81,8 +85,9 @@ Ti.Gesture.addEventListener('orientationchange',function(e)
 var b1 = Titanium.UI.createButton({
 	title:'Set Landscape ',
 	width:200,
-	height:40,
-	top:40
+	height:50,
+	top:60,
+	font: buttonFont
 });
 b1.addEventListener('click', function()
 {
@@ -96,8 +101,9 @@ win.add(b1);
 var b2 = Titanium.UI.createButton({
 	title:'Set Portrait',
 	width:200,
-	height:40,
-	top:90
+	height:50,
+	top:120,
+	font: buttonFont
 });
 b2.addEventListener('click', function()
 {
@@ -108,8 +114,9 @@ win.add(b2);
 var b3 = Titanium.UI.createButton({
 	title:'Reset orientation',
 	width:200,
-	height:40,
-	top:140
+	height:50,
+	top:180,
+	font: buttonFont
 });
 b3.addEventListener('click', function()
 {
@@ -118,39 +125,20 @@ b3.addEventListener('click', function()
 });
 win.add(b3);
 
-if (Titanium.Platform.name == 'iPhone OS')
-{
-	var landscape = Titanium.UI.createButton({
-		title:'Allow Landscape Only',
-		width:200,
-		height:40,
-		top:190
-	});
-	landscape.addEventListener('click', function()
-	{
-		// set and enforce landscape for this window
-		win.orientationModes = [
-			Titanium.UI.LANDSCAPE_LEFT,
-			Titanium.UI.LANDSCAPE_RIGHT
-		]; 
-		Titanium.UI.orientation = Titanium.UI.LANDSCAPE_LEFT;
-	});
-	win.add(landscape);
-}
-
 //
 // open a new window
 //
 var b4 = Titanium.UI.createButton({
 	title:'Open A Window',
 	width:200,
-	height:40,
-	top:240
+	height:50,
+	top:300,
+	font: buttonFont
 });
 b4.addEventListener('click', function()
 {
 	var subwin = Ti.UI.createWindow({
-		url:'vibrate.js',
+		//url:'vibrate.js',
 		backgroundColor:'purple'
 	});
 
@@ -166,8 +154,9 @@ b4.addEventListener('click', function()
 	var close = Titanium.UI.createButton({
 		title:'close',
 		width:200,
-		height:40,
-		top:60
+		height:50,
+		top:60,
+ 	    font: buttonFont
 	});
 	subwin.add(close);
 	close.addEventListener('click', function()
