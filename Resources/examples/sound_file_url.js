@@ -1,3 +1,5 @@
+// TODO: add progress bar for sound
+
 var win = Titanium.UI.currentWindow;
 
 var file = Titanium.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'cricket.wav');
@@ -19,7 +21,7 @@ var play = Titanium.UI.createButton({
 play.addEventListener('click', function()
 {
 	sound.play();
-	pb.max = sound.duration;
+	//pb.max = sound.duration;
 });
 win.add(play);
 
@@ -52,7 +54,7 @@ var reset = Titanium.UI.createButton({
 reset.addEventListener('click', function()
 {
 	sound.reset();
-	pb.value = 0;
+	//pb.value = 0;
 
 });
 win.add(reset);
@@ -70,7 +72,7 @@ var stop = Titanium.UI.createButton({
 stop.addEventListener('click', function()
 {
 	sound.stop();
-	pb.value = 0;
+	//pb.value = 0;
 });
 win.add(stop);
 
@@ -169,40 +171,18 @@ win.add(urlChange);
 //
 sound.addEventListener('complete', function()
 {
-	pb.value = 0;
+//	pb.value = 0;
 });
 sound.addEventListener('resume', function()
 {
 	Titanium.API.info('RESUME CALLED');
 });
 
-//
-//  PROGRESS BAR TO TRACK SOUND DURATION
-//
-var flexSpace = Titanium.UI.createButton({
-	systemButton:Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE
-});
-var pb = Titanium.UI.createProgressBar({
-	min:0,
-	value:0,
-	width:200
-});
-
-if (Ti.Platform.name != 'android') {
-	win.setToolbar([flexSpace,pb,flexSpace]);
-}
-pb.show();
-
-//
-// INTERVAL TO UPDATE PB
-//
 var i = setInterval(function()
 {
 	if (sound.isPlaying())
 	{
 		Ti.API.info('time ' + sound.time);
-		pb.value = sound.time;
-
 	}
 },500);
 

@@ -1,3 +1,5 @@
+// TODO: need to be able to leave the movie before it completes
+
 var win = Titanium.UI.currentWindow;
 
 var options = {

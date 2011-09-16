@@ -3,7 +3,7 @@ Ti.include('../common.js');
 // create table view data object
 var data = [
 	{title:'Play Movie', test:'../examples/movie_local.js'},
-	{title:'Vibrate', test:'../examples/vibrate.js'},
+	//{title:'Vibrate', test:'../examples/vibrate.js'},
 	{title:'Sound', test:'../examples/sound.js'},
 	{title:'Photo Gallery', test:'../examples/photo_gallery.js'},
 	{title:'Orientation', test:'../examples/orientation.js'},
