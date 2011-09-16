@@ -47,7 +47,8 @@ var lastNameField = Titanium.UI.createTextField({
 	top:100,
 	left:30,
 	width:250,
-	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
+	paddingLeft: 20
 });
 
 win.add(lastNameField);
@@ -70,8 +71,8 @@ win.add(save);
 var messageView = Titanium.UI.createView({
 	bottom:10,
 	backgroundColor:'#111',
-	height:40,
-	width:270,
+	height:50,
+	width:350,
 	borderRadius:10
 });
 
@@ -80,7 +81,10 @@ var messageLabel = Titanium.UI.createLabel({
 	text:'Register for a free toaster!',
 	height:'auto',
 	width:'auto',
-	textAlign:'center'
+	textAlign:'center',
+	font: {
+		fontSize:24	
+	}
 });
 
 messageView.add(messageLabel);

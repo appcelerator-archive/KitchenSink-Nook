@@ -1,5 +1,6 @@
 // current window
 var win = Titanium.UI.currentWindow;
+var buttonFont = {fontSize: 18};
 
 //
 // BACKGROUND COLOR
@@ -7,8 +8,9 @@ var win = Titanium.UI.currentWindow;
 var button = Titanium.UI.createButton({
 	title:'Change BG Color',
 	width:220,
-	height:40,
-	top:10
+	height:50,
+	top:10,
+	font: buttonFont
 });
 button.addEventListener('click', function()
 {
@@ -23,8 +25,9 @@ win.add(button);
 var buttonImage = Titanium.UI.createButton({
 	title:'Change BG Image',
 	width:220,
-	height:40,
-	top:60
+	height:50,
+	top:70,
+	font: buttonFont
 });
 buttonImage.addEventListener('click', function()
 {
@@ -38,8 +41,9 @@ win.add(buttonImage);
 var buttonWidthHeight = Titanium.UI.createButton({
 	title:'Toggle Height/Width',
 	width:220,
-	height:40,
-	top:110
+	height:50,
+	top:130,
+	font: buttonFont
 });
 var full=true;
 buttonWidthHeight.addEventListener('click', function()
@@ -47,7 +51,7 @@ buttonWidthHeight.addEventListener('click', function()
 	Ti.API.info('in width height');
 	if (full)
 	{
-		win.height = 300;
+		win.height = 400;
 		win.width = 300;
 		win.backgroundColor = 'black';
 		full=false;
@@ -71,8 +75,9 @@ win.add(buttonWidthHeight);
 var buttonOpacity = Titanium.UI.createButton({
 	title:'Toggle Opacity',
 	width:220,
-	height:40,
-	top:160
+	height:50,
+	top:190,
+	font: buttonFont
 });
 var opacity=true;
 buttonOpacity.addEventListener('click', function()
@@ -97,8 +102,9 @@ win.add(buttonOpacity);
 var buttonLayout = Titanium.UI.createButton({
 	title:'Layout/Dimension Properties',
 	width:220,
-	height:40,
-	top:210
+	height:50,
+	top:250,
+	font: buttonFont
 });
 var layout=true;
 var win1 = null;
@@ -145,8 +151,9 @@ win.add(buttonLayout);
 var buttonBorder = Titanium.UI.createButton({
 	title:'Toggle Border Properties',
 	width:220,
-	height:40,
-	top:260
+	height:50,
+	top:310,
+	font: buttonFont
 });
 var border=true;
 buttonBorder.addEventListener('click', function()
@@ -166,9 +173,3 @@ buttonBorder.addEventListener('click', function()
 		border=true;
 	}
 });
-
-// add iphone specific tests
-if (Titanium.Platform.name == 'iPhone OS')
-{
-	win.add(buttonBorder);
-}

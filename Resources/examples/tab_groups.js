@@ -90,7 +90,7 @@ closeTabGroupButton.addEventListener('click', function(e)
 // SET ACTIVE TAB (INDEX)
 // 
 var setActiveTabButton = Titanium.UI.createButton({
-	title:'Set Active Tab (Index)',
+	title:'Set active tab via index (Controls)',
 	top:160,
 	height:40,
 	width:200
@@ -105,7 +105,7 @@ setActiveTabButton.addEventListener('click', function(e)
 // SET ACTIVE TAB (OBJECT)
 // 
 var setActiveTabObjectButton = Titanium.UI.createButton({
-	title:'Set Active Tab (Object)',
+	title:'Set active tab via object (Controls)',
 	top:210,
 	height:40,
 	width:200

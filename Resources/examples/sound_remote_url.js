@@ -1,6 +1,7 @@
 var win = Titanium.UI.currentWindow;
 
-var url = "http://www.archive.org/download/CelebrationWav/1.wav";
+//var url = "http://www.archive.org/download/CelebrationWav/1.wav";
+var url = "http://ia600305.us.archive.org/27/items/CelebrationWav/1.wav";
 
 // load from remote url
 var sound = Titanium.Media.createSound({url:url,preload:true});
@@ -18,7 +19,7 @@ var play = Titanium.UI.createButton({
 play.addEventListener('click', function()
 {
 	sound.play();
-	pb.max = sound.duration;
+	//pb.max = sound.duration;
 });
 win.add(play);
 

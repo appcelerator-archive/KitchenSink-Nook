@@ -2,19 +2,19 @@ Ti.include('../common.js');
 
 // create table view data object
 var data = [
-	{title:'Tab Groups', Codestrongtest:'../examples/tab_groups.js'},
-	{title:'Window Properties', Codestrongtest:'../examples/window_properties.js'},
-	{title:'Window Layout', Codestrongtest:'../examples/window_layout.js'},
-	{title:'Window (Standalone)', Codestrongtest:'../examples/window_standalone.js'},
-	{title:'Views', Codestrongtest:'../examples/views.js'},
-	{title:'Custom Events', Codestrongtest:'../examples/custom_events.js'},
-	{title:'Window Events', Codestrongtest:'../examples/window_events.js'},
-	{title:'Vertical Layout', Codestrongtest:'../examples/vertical_layout.js'},
-	{title:'Horizontal Layout', Codestrongtest:'../examples/horizontal_layout.js'},
-	{title:'Preferences', Codestrongtest:'../examples/preferences.js'},
-	{title:'Hide Soft Keyboard (Android)', Codestrongtest:'../examples/android_hide_softkeyboard.js'},
-	{title: 'Window Soft Input (Android)', Codestrongtest:'../examples/android_window_soft_input_mode.js'},
-	{title: 'Menu (Android)', Codestrongtest:'../examples/android_menus.js'}
+	{title:'Tab Groups', test:'../examples/tab_groups.js'},
+	{title:'Window Properties', test:'../examples/window_properties.js'},
+	{title:'Window Layout', test:'../examples/window_layout.js'},
+	{title:'Window (Standalone)', test:'../examples/window_standalone.js'},
+	{title:'Views', test:'../examples/views.js'},
+	{title:'Custom Events', test:'../examples/custom_events.js'},
+	{title:'Window Events', test:'../examples/window_events.js'},
+	{title:'Vertical Layout', test:'../examples/vertical_layout.js'},
+	{title:'Horizontal Layout', test:'../examples/horizontal_layout.js'},
+	{title:'Preferences', test:'../examples/preferences.js'},
+	{title:'Hide Soft Keyboard (Android)', test:'../examples/android_hide_softkeyboard.js'},
+	{title: 'Window Soft Input (Android)', test:'../examples/android_window_soft_input_mode.js'},
+	{title: 'Menu (Android)', test:'../examples/android_menus.js'}
 ];
 NookKS.formatTableView(data);
 
