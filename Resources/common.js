@@ -6,7 +6,8 @@ NookKS = {};
 			data[i].hasChild = true;
 			data[i].height = 70;
 			data[i].font = {fontSize:24, fontWeight:'bold'};
-			data[i].left = 20	
+			data[i].left = 20,
+			data[i].classname = 'nav_row'
 		}	
 	};
 	
