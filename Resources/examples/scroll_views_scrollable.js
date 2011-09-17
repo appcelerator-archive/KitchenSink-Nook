@@ -48,7 +48,10 @@ var l1 = Ti.UI.createLabel({
 	text:'View 1',
 	color:'#fff',
 	width:'auto',
-	height:'auto'
+	height:'auto',
+	font: {
+		fontSize:24	
+	}
 });
 view1.add(l1);
 
@@ -59,7 +62,10 @@ var l2 = Ti.UI.createLabel({
 	text:'Click Me (View 2 - see log)',
 	color:'#fff',
 	width:'auto',
-	height:'auto'
+	height:'auto',
+	font: {
+		fontSize:24	
+	}
 });
 view2.add(l2);
 
@@ -70,7 +76,10 @@ var l3 = Ti.UI.createLabel({
 	text:'View 3',
 	color:'#fff',
 	width:'auto',
-	height:'auto'
+	height:'auto',
+	font: {
+		fontSize:24	
+	}
 });
 view3.add(l3);
 
@@ -81,7 +90,10 @@ var l4 = Ti.UI.createLabel({
 	text:'View 4',
 	color:'#fff',
 	width:'auto',
-	height:'auto'
+	height:'auto',
+	font: {
+		fontSize:24	
+	}
 });
 view4.add(l4);
 
@@ -128,7 +140,10 @@ add.addEventListener('click',function()
 		text:'View ' + (scrollView.views.length+1),
 		color:'#fff',
 		width:'auto',
-		height:'auto'
+		height:'auto',
+		font: {
+			fontSize:24	
+		}
 	});
 	newView.add(l);
 	scrollView.addView(newView);
@@ -159,7 +174,10 @@ change.addEventListener('click',function()
 		text:'View (Changed) ' + (i+1),
 		color:'#fff',
 		height:'auto',
-		width:'auto'
+		width:'auto',
+	font: {
+		fontSize:24	
+	}
 	});
 	newView.add(l);
 	var ar = [];
