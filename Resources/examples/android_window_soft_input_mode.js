@@ -20,7 +20,7 @@ var softAdjust = null;
 
 // ----------------------------------------------------
 
-var b1 = Ti.UI.createButton({ width : '30', height : '30', left : 10, top : 100});
+var b1 = Ti.UI.createButton({ width : '50', height : '50', left : 10, top : 100});
 b1.addEventListener('click', function() {
 	updateSoftAdjust(Ti.UI.Android.SOFT_INPUT_ADJUST_PAN);
 });
@@ -28,11 +28,11 @@ win.add(b1);
 
 var l1 = Ti.UI.createLabel({ 
 	text : 'SOFT_INPUT_ADJUST_PAN', color : 'black',
-	left : 60, height : 30, right : 10, top : 100
+	left : 80, height : 30, right : 10, top : 110
 });
 win.add(l1);
 
-var b2 = Ti.UI.createButton({ width : '30', height : '30', left : 10, top : 130});
+var b2 = Ti.UI.createButton({ width : '50', height : '50', left : 10, top : 160});
 b2.addEventListener('click', function() {
 	updateSoftAdjust(Ti.UI.Android.SOFT_INPUT_ADJUST_RESIZE);
 });
@@ -40,11 +40,11 @@ win.add(b2);
 
 var l2 = Ti.UI.createLabel({ 
 	text : 'SOFT_INPUT_ADJUST_RESIZE', color : 'black',
-	left : 60, height : 30, right : 10, top : 130
+	left : 80, height : 30, right : 10, top : 170
 });
 win.add(l2);
 
-var b3 = Ti.UI.createButton({ width : '30', height : '30', left : 10, top : 160});
+var b3 = Ti.UI.createButton({ width : '50', height : '50', left : 10, top : 220});
 b3.addEventListener('click', function() {
 	updateSoftAdjust(Ti.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED);
 });
@@ -52,7 +52,7 @@ win.add(b3);
 
 var l3 = Ti.UI.createLabel({ 
 	text : 'SOFT_INPUT_ADJUST_UNSPECIFIED', color : 'black',
-	left : 60, height : 30, right : 10, top : 160
+	left : 80, height : 30, right : 10, top : 230
 });
 win.add(l3);
 
@@ -77,7 +77,7 @@ function updateSoftAdjust(s) {
 //-------------------------------------------------------
 
 var launch = Ti.UI.createButton({
-	left : 10, height : 30, bottom : 10, right : 10,
+	left : 10, height : 60, bottom : 10, right : 10,
 	title : 'Launch'
 });
 launch.addEventListener('click', function() {

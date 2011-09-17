@@ -12,9 +12,9 @@ var data = [
 	{title:'Vertical Layout', test:'../examples/vertical_layout.js'},
 	{title:'Horizontal Layout', test:'../examples/horizontal_layout.js'},
 	{title:'Preferences', test:'../examples/preferences.js'},
-	{title:'Hide Soft Keyboard (Android)', test:'../examples/android_hide_softkeyboard.js'},
-	{title: 'Window Soft Input (Android)', test:'../examples/android_window_soft_input_mode.js'},
-	{title: 'Menu (Android)', test:'../examples/android_menus.js'}
+	{title:'Hide Soft Keyboard', test:'../examples/android_hide_softkeyboard.js'},
+	{title: 'Window Soft Input', test:'../examples/android_window_soft_input_mode.js'},
+	{title: 'Menu', test:'../examples/android_menus.js'}
 ];
 NookKS.formatTableView(data);
 
