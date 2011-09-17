@@ -2,8 +2,8 @@ var win = Titanium.UI.currentWindow;
 
 var imageView = Titanium.UI.createImageView({
 	image:'http://developer.appcelerator.com.s3.amazonaws.com/blog/post_images/appc.jpg',
-	width:261,
-	height:178,
+	width:300,
+	height:300,
 	top:20
 });
 
