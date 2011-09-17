@@ -11,7 +11,7 @@ var data = [
 	{title:'Window Events', test:'../examples/window_events.js'},
 	{title:'Vertical Layout', test:'../examples/vertical_layout.js'},
 	{title:'Horizontal Layout', test:'../examples/horizontal_layout.js'},
-	{title:'Preferences', test:'../examples/preferences.js'},
+	//{title:'Preferences', test:'../examples/preferences.js'},
 	{title:'Hide Soft Keyboard', test:'../examples/android_hide_softkeyboard.js'},
 	{title: 'Window Soft Input', test:'../examples/android_window_soft_input_mode.js'},
 	{title: 'Menu', test:'../examples/android_menus.js'}

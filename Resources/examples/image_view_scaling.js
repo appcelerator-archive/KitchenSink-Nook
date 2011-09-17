@@ -1,5 +1,5 @@
 var win = Titanium.UI.currentWindow;
-var TIMEOUT_SECS = 2;
+var X_TIMEOUT_SECS = 2;
 
 var imageView = Titanium.UI.createImageView({
 	image:'http://www.appcelerator.com/wp-content/uploads/2009/06/titanium_desk.png',
@@ -33,5 +33,5 @@ function getDimensions() {
 
 l.addEventListener('click', getDimensions);
 
-setTimeout(getDimensions, TIMEOUT_SECS * 1000); // give time for the remote image to load.
+setTimeout(getDimensions, X_TIMEOUT_SECS * 1000); // give time for the remote image to load.
 
