@@ -23,7 +23,7 @@ var view2 = Ti.UI.createView({
 var label = Ti.UI.createLabel({
 	text:'Click on me',
 	color:'white',
-	font:{fontSize:15,fontWeight:'bold'},
+	font:{fontSize:24,fontWeight:'bold'},
 	width:'auto',
 	height:'auto'
 });
@@ -35,18 +35,18 @@ win.add(view1);
 
 var l = Ti.UI.createLabel({
 	text:'click on box',
-	width:300,
+	width:500,
 	height:'auto',
 	top:10,
-	font:{fontSize:13}
+	font:{fontSize:24}
 });
 win.add(l);
 var l2 = Ti.UI.createLabel({
 	text:'click on label',
-	width:300,
+	width:500,
 	height:'auto',
-	top:25,
-	font:{fontSize:13}
+	top:40,
+	font:{fontSize:24}
 });
 win.add(l2);
 view2.addEventListener('click',function()

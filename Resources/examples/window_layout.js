@@ -10,8 +10,11 @@ var firstName = Titanium.UI.createLabel({
 	text:'First Name',
 	top:10,
 	left:30,
-	width:100,
-	height:'auto'
+	width:300,
+	height:'auto',
+	font:{
+		fontSize: 24	
+	}
 });
 
 win.add(firstName);
@@ -19,7 +22,7 @@ win.add(firstName);
 var firstNameField = Titanium.UI.createTextField({
 	hintText:'enter first name',
 	height:35,
-	top:35,
+	top:50,
 	left:30,
 	width:250,
 	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
@@ -33,10 +36,13 @@ win.add(firstNameField);
 var lastName = Titanium.UI.createLabel({
 	color:'#fff',
 	text:'Last Name',
-	top:75,
+	top:90,
 	left:30,
-	width:100,
-	height:'auto'
+	width:300,
+	height:'auto',
+	font:{
+		fontSize: 24	
+	}
 });
 
 win.add(lastName);
@@ -44,11 +50,10 @@ win.add(lastName);
 var lastNameField = Titanium.UI.createTextField({
 	hintText:'enter last name',
 	height:35,
-	top:100,
+	top:130,
 	left:30,
 	width:250,
-	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED,
-	paddingLeft: 20
+	borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
 });
 
 win.add(lastNameField);
@@ -58,10 +63,13 @@ win.add(lastNameField);
 //
 var save = Titanium.UI.createButton({
 	title:'Save my Information',
-	top:170,
+	top:200,
 	left:30,
-	height:30,
-	width:250
+	height:50,
+	width:250,
+	font: {
+		fontSize:18	
+	}
 });
 win.add(save);
 

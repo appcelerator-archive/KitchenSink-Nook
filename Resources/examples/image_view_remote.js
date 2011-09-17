@@ -1,7 +1,7 @@
 var win = Titanium.UI.currentWindow;
 
 var imageView = Titanium.UI.createImageView({
-	image:'http://www.appcelerator.com/wp-content/uploads/2009/06/titanium_desk.png',
+	image:'http://developer.appcelerator.com.s3.amazonaws.com/blog/post_images/appc.jpg',
 	defaultImage:'../images/cloud.png',
 	top:20,
 	width:100,
@@ -36,6 +36,6 @@ var b = Titanium.UI.createButton({
 });
 win.add(b);
 b.addEventListener('click', function(e) {
-		imageView2.image = 'http://www.appcelerator.com/wp-content/uploads/2009/06/titanium_desk.png';
+		imageView2.image = 'http://developer.appcelerator.com.s3.amazonaws.com/blog/post_images/appc.jpg';
 });
 

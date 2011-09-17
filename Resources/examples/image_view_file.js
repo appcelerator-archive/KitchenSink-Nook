@@ -4,8 +4,8 @@ var f = Ti.Filesystem.getFile(Titanium.Filesystem.resourcesDirectory,'images/app
 
 var imageView = Titanium.UI.createImageView({
 	image:f,
-	width:24,
-	height:24,
+	width:300,
+	height:300,
 	top:100
 });
 
@@ -16,11 +16,14 @@ var l = Titanium.UI.createLabel({
 	bottom:20,
 	width:'auto',
 	height:'auto',
-	color:'#999'
+	color:'#999',
+	font: {
+		fontSize:24	
+	}
 });
 win.add(l);
 
 imageView.addEventListener('click', function()
 {
-	Titanium.UI.createAlertDialog({title:'Image View', message:'You clicked me!'}).show();
+	Titanium.UI.createAlertDialog({title:'Image View', message:'You clicked me!', buttonNames:['OK']}).show();
 });

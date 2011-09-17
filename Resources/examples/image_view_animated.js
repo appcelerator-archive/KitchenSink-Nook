@@ -155,7 +155,10 @@ var l = Titanium.UI.createLabel({
 	bottom:10,
 	color:'white',
 	width:'auto',
-	height:'auto'
+	height:'auto',
+	font: {
+		fontSize:24	
+	}
 });
 
 durationUp.addEventListener('click', function()

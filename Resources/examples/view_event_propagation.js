@@ -14,7 +14,7 @@ d.add(Ti.UI.createLabel({name:"label d",color:'white',text:'D',height:'auto',wid
 
 var l = Ti.UI.createLabel({
 	color:'white',
-	font:{fontSize:14,fontWeight:'bold',fontFamily:'Helvetica Neue'},
+	font:{fontSize:24,fontWeight:'bold',fontFamily:'Helvetica Neue'},
 	bottom:5,
 	textAlign:'center',
 	text:'click anywhere',
@@ -24,8 +24,8 @@ var l = Ti.UI.createLabel({
 
 var l2 = Ti.UI.createLabel({
 	color:'white',
-	font:{fontSize:14,fontFamily:'Helvetica Neue'},
-	bottom:25,
+	font:{fontSize:24,fontFamily:'Helvetica Neue'},
+	bottom:35,
 	textAlign:'center',
 	text:'',
 	height:'auto',

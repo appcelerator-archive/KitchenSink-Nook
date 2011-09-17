@@ -1,4 +1,5 @@
-// create table view data object
+Ti.include('../common.js');
+
 var data = [
 	{title:'Basic', hasChild:true, test:'../examples/image_view_basic.js'},
 	{title:'Animated', hasChild:true, test:'../examples/image_view_animated.js'},
@@ -6,40 +7,10 @@ var data = [
 	{title:'Remote Image', hasChild:true, test:'../examples/image_view_remote.js'},
 	{title:'Image Scaling', hasChild:true, test:'../examples/image_view_scaling.js'},
 	{title:'Image View Positioning', hasChild:true, test:'../examples/image_view_positioning.js'},
-	{title:'Image View Encoding', hasChild:true, test:'../examples/image_view_encoding.js'}
-
+	{title:'Image View Encoding', hasChild:true, test:'../examples/image_view_encoding.js'},
+	{title:'Image Rapid Update', hasChild:true, test:'../examples/image_view_updateimages.js'},
+	{title:'Android drawable resource', hasChild:true, test:'image_view_resource.js'}	
 ];
 
-// add iphone specific tests
-if (Titanium.Platform.name == 'iPhone OS')
-{
-	data.push({title:'Image Blob', hasChild:true, test:'../examples/image_view_blob.js'});
-	data.push({title:'Image Masking', hasChild:true, test:'../examples/image_mask.js'});
-	data.push({title:'Image Toolbar', hasChild:true, test:'../examples/image_view_toolbar.js'});
-}
+Titanium.UI.currentWindow.add(NookKS.createNavigationTableView(data));
 
-data.push({title:'Image Rapid Update', hasChild:true, test:'../examples/image_view_updateimages.js'});
-if (Titanium.Platform.name == 'android') {
-	data.push({title:'Android drawable resource', hasChild:true, test:'image_view_resource.js'});
-}
-
-// create table view
-var tableview = Titanium.UI.createTableView({
-	data:data
-});
-
-// create table view event listener
-tableview.addEventListener('click', function(e)
-{
-	if (e.rowData.test)
-	{
-		var win = Titanium.UI.createWindow({
-			url:e.rowData.test,
-			title:e.rowData.title
-		});
-		Titanium.UI.currentTab.open(win,{animated:true});
-	}
-});
-
-// add table view to the window
-Titanium.UI.currentWindow.add(tableview);
