@@ -28,22 +28,10 @@ tableview.addEventListener('click', function(e)
 {
 	if (e.rowData.test)
 	{
-		var win = null;
-		if (Ti.Platform.name == "android") {
-			win = Titanium.UI.createWindow({
-				url:e.rowData.test,
-				title:e.rowData.title
-			});
-		} else {
-			win = Titanium.UI.createWindow({
-				url:e.rowData.test,
-				title:e.rowData.title,
-				backgroundColor:'#fff',
-				barColor:'#111'
-
-			});
-		}
-
+		var win = Titanium.UI.createWindow({
+			url:e.rowData.test,
+			title:e.rowData.title
+		});
 
 		if (e.index == 3)
 		{
@@ -74,26 +62,28 @@ Titanium.UI.currentWindow.addEventListener('focus', function()
 //  ADD EVENT LISTENERS FOR CUSTOM EVENTS
 //
 var win = Titanium.UI.createWindow({
-	height:30,
-	width:250,
+	height:50,
+	width:580,
 	bottom:110,
 	borderRadius:10
 });
 
 var view = Titanium.UI.createView({
-	backgroundColor:'#000',
+	backgroundColor:'#555',
 	opacity:0.7,
-	height:30,
-	width:250,
+	height:50,
+	width:580,
 	borderRadius:10
 });
 
 var label = Titanium.UI.createLabel({
 	color:'#fff',
-	font:{fontSize:13},
 	textAlign:'center',
-	width:'auto',
-	height:'auto'
+	width:580,
+	height:'auto',
+	font: {
+		fontSize: 24	
+	}
 });
 win.add(view);
 win.add(label);
@@ -110,7 +100,7 @@ Titanium.App.addEventListener('event_one', function(e)
 
 Titanium.App.addEventListener('event_two', function(e)
 {
-	label.text = 'base_ui.js: event two, name = ' + e.name;
+	label.text = 'base_ui.js: event two, name = ' + e.name + ', city = ' + e.city;
 	win.open();
 	setTimeout(function()
 	{
