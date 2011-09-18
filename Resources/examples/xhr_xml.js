@@ -13,11 +13,15 @@ xhr.onload = function()
 		height:'auto',
 		width:'auto',
 		top:20,
-		text:screenName.text
+		text:screenName.text,
+		font: {
+			fontSize:24,
+			fontWeight:'bold'	
+		}
 	});
 	Ti.UI.currentWindow.add(screenname);
 	
-	var textarea = Ti.UI.createTextArea({borderRadius:5,borderWidth:2,borderColor:'#999',backgroundColor:'#111',color:'yellow',bottom:10,left:10,right:10,height:300,font:{fontFamily:'courier',fontSize:10}});
+	var textarea = Ti.UI.createTextArea({borderRadius:5,borderWidth:2,borderColor:'#999',backgroundColor:'#111',color:'yellow',bottom:10,left:10,right:10,top:60,font:{fontFamily:'courier',fontSize:18}});
 	textarea.value = this.responseText;
 	Ti.UI.currentWindow.add(textarea);
 };
