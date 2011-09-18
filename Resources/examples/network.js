@@ -2,7 +2,7 @@ var win = Titanium.UI.currentWindow;
 
 var label = Titanium.UI.createLabel({
 	text:'type:' + Titanium.Network.networkType + ' online:' + Titanium.Network.online + ' name:'+Titanium.Network.networkTypeName,
-	font:{fontSize:14},
+	font:{fontSize:24},
 	color:'#777',
 	top:10,
 	left:10,
@@ -13,9 +13,9 @@ win.add(label);
 
 var label2 = Titanium.UI.createLabel({
 	text:'Change Event: not fired',
-	font:{fontSize:14},
+	font:{fontSize:24},
 	color:'#777',
-	top:30,
+	top:50,
 	left:10,
 	width:'auto',
 	height:'auto'

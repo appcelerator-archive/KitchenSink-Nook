@@ -26,7 +26,10 @@ function resultHelper(result, expected) {
 var l = Titanium.UI.createLabel({
 	text:'See Log for output',
 	height:'auto',
-	width:'auto'
+	width:'auto',
+	font: {
+		fontSize: 24	
+	}
 });
 win.add(l);
 
