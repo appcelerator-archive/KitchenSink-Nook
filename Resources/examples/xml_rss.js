@@ -24,33 +24,21 @@ xhr.onload = function()
 				var label = Ti.UI.createLabel({
 					text:title,
 					left:72,
+					height:70,
 					top:5,
 					bottom:5,
-					right:5				
+					right:5,
+					font: {
+						fontSize: 18	
+					}				
 				});
 				row.add(label);
-				var img;
-				if (Titanium.Platform.name == 'android') 
-				{
-					// iphone moved to a single image property - android needs to do the same
-					img = Ti.UI.createImageView({
-						image:media,
-						left:5,
-						height:60,
-						width:60
-					});
-
-				}
-				else
-				{
-					img = Ti.UI.createImageView({
-						image:media,
-						left:5,
-						height:60,
-						width:60
-					});
-					
-				}
+				var img = Ti.UI.createImageView({
+					image:media,
+					left:5,
+					height:60,
+					width:60
+				});
 				row.add(img);
 				data[x++] = row;
 				row.url = item.getElementsByTagName("link").item(0).text;
@@ -63,15 +51,6 @@ xhr.onload = function()
 			var w = Ti.UI.createWindow({title:doctitle});
 			var wb = Ti.UI.createWebView({url:e.row.url});
 			w.add(wb);
-			var b = Titanium.UI.createButton({
-				title:'Close',
-				style:Titanium.UI.iPhone.SystemButtonStyle.PLAIN
-			});
-			w.setLeftNavButton(b);
-			b.addEventListener('click',function()
-			{
-				w.close();
-			});
 			w.open({modal:true});
 		});
 	}
