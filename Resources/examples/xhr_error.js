@@ -2,7 +2,7 @@ var win=Titanium.UI.currentWindow;
 
 var l1 = Titanium.UI.createLabel({
 	text:'UTF-8 GET',
-	font:{fontSize:16,fontWeight:'bold'},
+	font:{fontSize:32,fontWeight:'bold'},
 	top:10,
 	width:300,
 	left:10,
@@ -12,12 +12,12 @@ win.add(l1);
 
 var l2 = Titanium.UI.createLabel({
 	text:'Waiting for response...',
-	font:{fontSize:13},
-	top:40,
+	font:{fontSize:24},
+	top:60,
 	left:10,
 	width:300,
 	height:'auto',
-	color:'#888'
+	color:'#999'
 });
 win.add(l2);
 
@@ -30,7 +30,7 @@ xhr.onload = function()
 
 xhr.onerror = function(e)
 {
-	l2.text = e.error;
+	l2.text = "Status: " + this.status + "\nError: " + e.error + "\nResponse: " + this.responseText; 
 };
 
 // open the client

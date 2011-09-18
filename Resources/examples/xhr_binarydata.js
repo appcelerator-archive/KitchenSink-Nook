@@ -2,15 +2,15 @@ var win = Titanium.UI.currentWindow;
 
 var l = Titanium.UI.createLabel({
 	text:'Downloading image...',
-	font:{fontSize:13},
+	font:{fontSize:24},
 	top:10,
 	left:10,
 	width:300,
-	color:'#888'
+	color:'#999'
 });
 win.add(l);
 var imageView = Titanium.UI.createImageView({
-	top:50,
+	top:70,
 	left:10,
 	height:100,
 	width:80
