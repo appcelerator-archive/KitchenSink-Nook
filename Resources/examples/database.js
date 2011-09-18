@@ -5,15 +5,18 @@ var l = Titanium.UI.createLabel({
 	top:10,
 	left:10,
 	height:'auto',
-	width:'auto'
+	width:'auto',
+	font: {
+		fontSize: 24	
+	}
 });
 win.add(l);
 
 var b1 = Titanium.UI.createButton({
 	title:'DB in 2nd Context',
 	width:200,
-	height:40,
-	top:40
+	height:50,
+	top:60
 });
 win.add(b1);
 
@@ -21,8 +24,8 @@ b1.addEventListener('click', function()
 {
 	var win1 = Titanium.UI.createWindow({
 		url:'database_2.js',
-		height:30,
-		width:280,
+		height:50,
+		width:400,
 		borderRadius:10,
 		bottom:80,
 		backgroundColor:'#333'
@@ -30,7 +33,7 @@ b1.addEventListener('click', function()
 	var l1 = Titanium.UI.createLabel({
 		text:'2nd context test - see log.',
 		color:'#fff',
-		font:{fontSize:14},
+		font:{fontSize:24},
 		width:'auto',
 		height:'auto'
 	});
@@ -41,8 +44,8 @@ b1.addEventListener('click', function()
 var b2 = Titanium.UI.createButton({
 	title:'Pre-packaged DB',
 	width:200,
-	height:40,
-	top:100
+	height:50,
+	top:120
 });
 win.add(b2);
 
@@ -50,8 +53,8 @@ b2.addEventListener('click', function()
 {
 	var win2 = Titanium.UI.createWindow({
 		url:'database_3.js',
-		height:30,
-		width:280,
+		height:50,
+		width:400,
 		borderRadius:10,
 		bottom:140,
 		backgroundColor:'#333'
@@ -59,7 +62,7 @@ b2.addEventListener('click', function()
 	var l2= Titanium.UI.createLabel({
 		text:'Pre-packaged Db - see log.',
 		color:'#fff',
-		font:{fontSize:14},
+		font:{fontSize:24},
 		width:'auto',
 		height:'auto'
 	});
@@ -71,7 +74,7 @@ var l3 = Titanium.UI.createLabel({
 	text:'unicode placeholder',
 	width:300,
 	height:40,
-	top:160
+	top:180
 });
 win.add(l3);
 var db = Titanium.Database.open('mydb');

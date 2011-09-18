@@ -4,7 +4,10 @@ var win = Titanium.UI.currentWindow;
 var label = Ti.UI.createLabel({
 	text:'No app event received. Make call while running app',
 	textAlign:'center',
-	width:'auto'
+	width:'auto',
+	font: {
+		fontSize: 24	
+	}
 });
 
 win.add(label);
