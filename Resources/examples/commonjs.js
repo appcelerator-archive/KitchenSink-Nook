@@ -1,7 +1,7 @@
 var win = Ti.UI.currentWindow;
 
 var view = Ti.UI.createView({
-	backgroundColor:"white",
+	backgroundColor:"#000",
 	layout:"vertical"
 });
 
@@ -13,7 +13,11 @@ function addResult(msg)
 		height:"auto",
 		width:"auto",
 		top:20,
-		text:msg
+		text:msg,
+		font: {
+			fontSize: 24	
+		},
+		color: '#fff'
 	});
 	view.add(label);
 }
