@@ -217,23 +217,23 @@ var l17 = Titanium.UI.createLabel({
 
 win.add(l17);
 
-var l18 = Titanium.UI.createLabel({
-	text:'is24HourTimeFormat:' + Titanium.Platform.is24HourTimeFormat(),
-	top:310,
-	left:10,
-	width:300,
-	height:'auto',
-	font:{fontSize:14},
-	color:'#777'
-});
-
-win.add(l18);
+// var l18 = Titanium.UI.createLabel({
+	// text:'is24HourTimeFormat:' + Titanium.Platform.is24HourTimeFormat(),
+	// top:310,
+	// left:10,
+	// width:300,
+	// height:'auto',
+	// font:{fontSize:14},
+	// color:'#777'
+// });
+// 
+// win.add(l18);
 
 var b = Titanium.UI.createButton({
 	title:'Open URL',
-	height:30,
+	height:50,
 	width:200,
-	top:330
+	top:310
 });
 win.add(b);
 var openURL=1;
