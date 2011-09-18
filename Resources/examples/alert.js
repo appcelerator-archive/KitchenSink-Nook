@@ -13,7 +13,7 @@ var l = Titanium.UI.createLabel({
 	textAlign:'center',
 	bottom:80,
 	color:'#336699',
-	font:{fontSize:13},
+	font:{fontSize:24},
 	width:'auto',
 	height:'auto'
 });
@@ -37,7 +37,7 @@ win.add(l);
 //
 var button1 = Titanium.UI.createButton({
 	title:'Basic Alert',
-	height:40,
+	height:50,
 	width:200,
 	top:10
 });
@@ -60,9 +60,9 @@ win.add(button1);
 //
 var button2 = Titanium.UI.createButton({
 	title:'Alert 2 Buttons',
-	height:40,
+	height:50,
 	width:200,
-	top:60
+	top:70
 });
 
 button2.addEventListener('click', function()
@@ -82,9 +82,9 @@ win.add(button2);
 //
 var button3 = Titanium.UI.createButton({
 	title:'Alert 3 Buttons',
-	height:40,
+	height:50,
 	width:200,
-	top:110
+	top:130
 });
 
 button3.addEventListener('click', function()
@@ -103,17 +103,24 @@ win.add(button3);
 //
 var button4 = Titanium.UI.createButton({
 	title:'Double Alert',
-	height:40,
+	height:50,
 	width:200,
-	top:160
+	top:190
 });
 
 button4.addEventListener('click', function()
 {
 	// test firing 2 alerts in a row, should show the
 	// first and after you click OK, should then show the next
-	alert("You should see this first");
-	alert("Now you should see this one, assuming you dismissed the first alert");
+	var a = Titanium.UI.createAlertDialog({
+		title:'Double Alert',
+		message:"You should see this first",
+		buttonNames: ['OK']
+	});
+	a.addEventListener('click', function(e) {
+		alert("Now you should see this one, assuming you dismissed the first alert");
+	});
+	a.show();
 });
 
 win.add(button4);
@@ -124,22 +131,22 @@ win.add(button4);
 //
 var button5 = Titanium.UI.createButton({
 	title:'Cancel Alert',
-	height:40,
+	height:50,
 	width:200,
-	top:210
+	top:250
 });
 
 button5.addEventListener('click', function()
 {
 	var a = Titanium.UI.createAlertDialog({
 		title:'Alert Test',
-		message:'You should see and it should hide automatically in about 2 seconds or when you suspend.'
+		message:'You should see and it should hide automatically in about 3 seconds or when you suspend.'
 	});
 	a.show();
 	setTimeout(function()
 	{
 		a.hide();
-	},2000);
+	},3000);
 });
 
 win.add(button5);
