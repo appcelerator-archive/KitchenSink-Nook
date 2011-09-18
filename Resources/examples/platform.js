@@ -217,18 +217,6 @@ var l17 = Titanium.UI.createLabel({
 
 win.add(l17);
 
-// var l18 = Titanium.UI.createLabel({
-	// text:'is24HourTimeFormat:' + Titanium.Platform.is24HourTimeFormat(),
-	// top:310,
-	// left:10,
-	// width:300,
-	// height:'auto',
-	// font:{fontSize:14},
-	// color:'#ddd'
-// });
-// 
-// win.add(l18);
-
 var b = Titanium.UI.createButton({
 	title:'Open URL',
 	height:50,
@@ -236,33 +224,9 @@ var b = Titanium.UI.createButton({
 	top:310
 });
 win.add(b);
-var openURL=0;
-b.addEventListener('click', function()
-{
-	
-	var url = 'http://www.appcelerator.com';
-	// switch(openURL % 3)
-	// {
-		// case 0:
-			// url = 'http://www.google.com';
-			// b.title='Open URL (web)';
-			// break;
-		// case 1:
-			// url = 'tel:4043332222';
-			// b.title='Open URL (tel)';
-			// break;
-		// case 2:
-			// url = 'sms:4043332222';
-			// b.title='Open URL (sms)';
-			// break;
-	// }
-	// if (Titanium.Platform.name != 'android') {
-		// if (!Titanium.Platform.canOpenURL(url)) {
-			// Ti.API.warn("Can't open url: "+url);
-		// }
-	// }
+
+b.addEventListener('click', function() {
 	Titanium.Platform.openURL('http://www.appcelerator.com');
-	//openURL++;
 });
 
 //
