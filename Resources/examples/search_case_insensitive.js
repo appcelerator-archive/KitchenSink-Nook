@@ -1,7 +1,10 @@
 var win = Ti.UI.currentWindow;
 
 var l = Ti.UI.createLabel({
-	text:'Check console output'
+	text:'Check console output',
+	font: {
+		fontSize: 24	
+	}
 });
 
 win.add(l);

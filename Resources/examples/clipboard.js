@@ -8,7 +8,7 @@ win.orientationModes = [
 ]; 
 
 var source = Titanium.UI.createTextField({
-	height:45,
+	height:55,
 	top:10,
 	left:10,
 	width:250,
@@ -19,8 +19,8 @@ win.add(source);
 
 var copy = Titanium.UI.createButton({
 	title:'Copy',
-	height:40,
-	top:55,
+	height:50,
+	top:70,
 	left:10,
 	width:250
 });
@@ -31,8 +31,8 @@ copy.addEventListener('click', function()
 win.add(copy);
 
 var dest = Titanium.UI.createTextField({
-	height:45,
-	top:120,
+	height:55,
+	top:140,
 	left:10,
 	width:250,
 	hintText: 'paste here',
@@ -42,8 +42,8 @@ win.add(dest);
 
 var paste = Titanium.UI.createButton({
 	title:'Paste',
-	height:40,
-	top:165,
+	height:50,
+	top:200,
 	left:10,
 	width:250
 });
