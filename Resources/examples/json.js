@@ -3,7 +3,7 @@ var win = Titanium.UI.currentWindow;
 var data = [];
 function testRow(name, str, testfn) {
 	var passed = testfn(JSON.parse(str));
-	data.push({title: name + " : " + passed, color: passed ? "green" : "red"});
+	data.push({title: name + " : " + passed, color: passed ? "green" : "red", height: 80, font:{fontSize:24}, left:20});
 }
 
 testRow("nested object", "{\"a\": {\"b\": 1}}", function(obj) { return obj.a.b == 1; });
