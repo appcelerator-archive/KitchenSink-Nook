@@ -13,7 +13,7 @@ var data = [
 	{title:'Remove Views', test:'../examples/remove_views.js'},
 	{title:'zIndex', test:'../examples/views_zindex.js'},
 	{title:'Email Dialog', test:'../examples/email_dialog.js'},
-	{title:'Map View', test:'../examples/map_view.js'},
+	//{title:'Map View', test:'../examples/map_view.js'},
 	{title:'View w/ Size', test:'../examples/view_with_size.js'}
 ];
 
