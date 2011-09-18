@@ -57,7 +57,7 @@ if (Ti.Platform.name == 'android') {
 	Ti.API.info('external directoryListing = ' + dir.getParent().getDirectoryListing());
 }
 
-var l = Titanium.UI.createLabel({text:'Check Log for details', width:300, height:'auto', textAlign:'center'});
+var l = Titanium.UI.createLabel({text:'Check Log for details', width:400, height:'auto', textAlign:'center', font:{fontSize:24}});
 win.add(l);
 
 // test to make sure we can still access compiled JS files
