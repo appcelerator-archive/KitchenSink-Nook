@@ -36,7 +36,7 @@ var l1 = Titanium.UI.createLabel({
 	left:10,
 	width:'auto',
 	font:{fontSize:14},
-	color:'#777',
+	color:'#ddd',
 	height:'auto'
 });
 
@@ -49,7 +49,7 @@ var l2 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l2);
@@ -61,7 +61,7 @@ var l3 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l3);
@@ -73,7 +73,7 @@ var l4 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l4);
@@ -85,7 +85,7 @@ var l5 = Titanium.UI.createLabel({
 	width:'auto',
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l5);
@@ -97,7 +97,7 @@ var l6 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l6);
@@ -110,7 +110,7 @@ var l7 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l7);
@@ -124,7 +124,7 @@ var l8 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l8);
@@ -136,7 +136,7 @@ var l9 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l9);
@@ -152,7 +152,7 @@ var l11 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l11);
@@ -164,7 +164,7 @@ var l12 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l12);
@@ -176,7 +176,7 @@ var l13 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l13);
@@ -188,7 +188,7 @@ var l15 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l15);
@@ -200,7 +200,7 @@ var l16 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l16);
@@ -212,7 +212,7 @@ var l17 = Titanium.UI.createLabel({
 	width:300,
 	height:'auto',
 	font:{fontSize:14},
-	color:'#777'
+	color:'#ddd'
 });
 
 win.add(l17);
@@ -224,7 +224,7 @@ win.add(l17);
 	// width:300,
 	// height:'auto',
 	// font:{fontSize:14},
-	// color:'#777'
+	// color:'#ddd'
 // });
 // 
 // win.add(l18);
@@ -236,32 +236,33 @@ var b = Titanium.UI.createButton({
 	top:310
 });
 win.add(b);
-var openURL=1;
+var openURL=0;
 b.addEventListener('click', function()
 {
-	var url;
-	switch(openURL % 3)
-	{
-		case 0:
-			url = 'http://www.google.com';
-			b.title='Open URL (web)';
-			break;
-		case 1:
-			url = 'tel:4043332222';
-			b.title='Open URL (tel)';
-			break;
-		case 2:
-			url = 'sms:4043332222';
-			b.title='Open URL (sms)';
-			break;
-	}
-	if (Titanium.Platform.name != 'android') {
-		if (!Titanium.Platform.canOpenURL(url)) {
-			Ti.API.warn("Can't open url: "+url);
-		}
-	}
-	Titanium.Platform.openURL(url);
-	openURL++;
+	
+	var url = 'http://www.appcelerator.com';
+	// switch(openURL % 3)
+	// {
+		// case 0:
+			// url = 'http://www.google.com';
+			// b.title='Open URL (web)';
+			// break;
+		// case 1:
+			// url = 'tel:4043332222';
+			// b.title='Open URL (tel)';
+			// break;
+		// case 2:
+			// url = 'sms:4043332222';
+			// b.title='Open URL (sms)';
+			// break;
+	// }
+	// if (Titanium.Platform.name != 'android') {
+		// if (!Titanium.Platform.canOpenURL(url)) {
+			// Ti.API.warn("Can't open url: "+url);
+		// }
+	// }
+	Titanium.Platform.openURL('http://www.appcelerator.com');
+	//openURL++;
 });
 
 //
