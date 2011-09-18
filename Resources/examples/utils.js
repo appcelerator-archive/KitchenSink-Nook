@@ -15,17 +15,23 @@ scrollView.add(Ti.UI.createLabel({
 	textAlign:'left',
 	width: Ti.Platform.displayCaps.platformWidth, 
 	height: 'auto',
-	text: "base64 encode " + data + " => " + encoded
+	text: "base64 encode " + data + " => " + encoded,
+	font: {
+		fontSize: 24	
+	}
 }));
 
-var encoded = Ti.Utils.base64decode(encoded.toString());
+var decoded = Ti.Utils.base64decode(encoded.toString());
 
 scrollView.add(Ti.UI.createLabel({
 	top: 75,
 	textAlign:'left',
 	width: Ti.Platform.displayCaps.platformWidth, 
 	height: 'auto',
-	text: "base64 decode " + encoded + " => " + data + ", decoded: " + encoded.toString()
+	text: "base64 decode " + encoded + " => " + data + ", decoded: " + decoded.toString(),
+	font: {
+		fontSize: 24	
+	}
 }));
 
 scrollView.add(Ti.UI.createLabel({
@@ -33,7 +39,10 @@ scrollView.add(Ti.UI.createLabel({
 	textAlign:'left',
 	width: Ti.Platform.displayCaps.platformWidth, 
 	height: 'auto',
-	text: "md5 checksum " + data + " => " + Ti.Utils.md5HexDigest(data)+", should be => 7ac66c0f148de9519b8bd264312c4d64"
+	text: "md5 checksum " + data + " => " + Ti.Utils.md5HexDigest(data)+", should be => 7ac66c0f148de9519b8bd264312c4d64",
+	font: {
+		fontSize: 24	
+	}
 }));
 
 var s = " ♥Amanda22♥".toUpperCase();
@@ -42,7 +51,10 @@ scrollView.add(Ti.UI.createLabel({
 	textAlign:'left',
 	width: Ti.Platform.displayCaps.platformWidth, 
 	height: 'auto',
-	text: "toUpper test => " +s
+	text: "toUpper test => " +s,
+	font: {
+		fontSize: 24	
+	}
 }));
 
 var sha1 = Ti.Utils.sha1("abc");
@@ -51,5 +63,8 @@ scrollView.add(Ti.UI.createLabel({
 	textAlign:'left',
 	width: Ti.Platform.displayCaps.platformWidth, 
 	height: 'auto',
-	text: "sha1 test => " +sha1 +" should be => a9993e364706816aba3e25717850c26c9cd0d89d: " + (sha1 == 'a9993e364706816aba3e25717850c26c9cd0d89d')
+	text: "sha1 test => " +sha1 +" should be => a9993e364706816aba3e25717850c26c9cd0d89d: " + (sha1 == 'a9993e364706816aba3e25717850c26c9cd0d89d'),
+	font: {
+		fontSize: 24	
+	}
 }));
