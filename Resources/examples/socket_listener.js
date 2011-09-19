@@ -56,18 +56,18 @@ var socket = Titanium.Network.Socket.createTCP({
 
 var messageLabel = Titanium.UI.createLabel({
 	text:'Socket messages',
-	font:{fontSize:14},
-	color:'#777',
-	top:220,
+	font:{fontSize:24},
+	color:'#999',
+	top:280,
 	left:10
 });
 win.add(messageLabel);
 
 var readLabel = Titanium.UI.createLabel({
 	text:'Read data',
-	font:{fontSize:14},
-	color:'#777',
-	top:250,
+	font:{fontSize:24},
+	color:'#999',
+	top:320,
 	left:10,
 	width:400
 });
@@ -76,7 +76,7 @@ win.add(readLabel);
 var connectButton = Titanium.UI.createButton({
 	title:'Listen on 40404',
 	width:200,
-	height:40,
+	height:50,
 	top:10
 });
 win.add(connectButton);
@@ -93,8 +93,8 @@ connectButton.addEventListener('click', function() {
 var closeButton = Titanium.UI.createButton({
 	title:'Close',
 	width:200,
-	height:40,
-	top:60
+	height:50,
+	top:70
 });
 win.add(closeButton);
 closeButton.addEventListener('click', function() {
@@ -118,8 +118,8 @@ closeButton.addEventListener('click', function() {
 var stateButton = Titanium.UI.createButton({
 	title:'Socket state',
 	width:200,
-	height:40,
-	top:110
+	height:50,
+	top:130
 });
 win.add(stateButton);
 stateButton.addEventListener('click', function() {
@@ -147,8 +147,8 @@ stateButton.addEventListener('click', function() {
 var writeButton = Titanium.UI.createButton({
 	title:"Write 'Paradise Lost'",
 	width:200,
-	height:40,
-	top:160
+	height:50,
+	top:190
 });
 win.add(writeButton);
 writeButton.addEventListener('click', function() {
@@ -159,7 +159,7 @@ writeButton.addEventListener('click', function() {
 		var sock = connectedSockets[index];
 		Ti.Stream.writeStream(input, sock, 4096);
 	}
-	messageLabel.text = "I'm a writer!";
+	readLabel.text = "I'm a writer!";
 });
 
 // Cleanup
